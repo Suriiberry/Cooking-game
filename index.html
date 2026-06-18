@@ -1,14 +1,38 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vegetarian Restaurant Game</title>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veggie Bistro Sim</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
-    <script src="src/main.js"></script>
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- UI Overlays (DOM-based for crisp text & easy styling) -->
+  <div id="ui-layer">
+    <div id="ticket-board">
+      <h3>📋 Active Orders</h3>
+      <ul id="order-list"></ul>
+    </div>
+
+    <div id="stats-panel">
+      <p>💰 Coins: <span id="coin-count">0</span></p>
+      <p>⭐ Reputation: <span id="rep-count">1.0</span></p>
+      <button id="save-btn">💾 Checkpoint Save</button>
+    </div>
+
+    <div id="workstation-panel" class="hidden">
+      <h3 id="ws-title">Workstation</h3>
+      <div id="ws-progress"></div>
+      <p id="ws-instruction">Press SPACE to interact</p>
+    </div>
+
+    <!-- Camera Toggle -->
+    <button id="cam-toggle" class="top-right-btn">📷 Switch View (1st/3rd)</button>
+  </div>
+
+  <script src="game.js"></script>
 </body>
 </html>
