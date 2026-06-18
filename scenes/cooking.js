@@ -1,6 +1,7 @@
-// scenes/cooking.js
+// scenes/cooking.js (updated)
 import Phaser from 'phaser';
 import { Order } from '../utils/order';
+import { Multiplayer } from '../utils/multiplayer';
 
 class Cooking extends Phaser.Scene {
   constructor() {
@@ -19,9 +20,13 @@ class Cooking extends Phaser.Scene {
     // Create order object
     const menuItem = new Order('Vegetable Stir Fry', 2);
     this.order = menuItem;
+
+    // Initialize multiplayer features
+    this.multiplayer = new Multiplayer();
   }
 
   update(time, delta) {
     // Implement cooking mechanics (e.g., timing-based mini-game)
+    // and integrate with multiplayer features
   }
 }
